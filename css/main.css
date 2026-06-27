@@ -17,7 +17,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--white); background-color: var(--midnight-navy); overflow-x: hidden; }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
@@ -350,9 +350,9 @@ button { cursor: pointer; font-family: var(--font-body); }
 
 [data-aos] { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 [data-aos].aos-animate { opacity: 1; transform: translateY(0); }
-[data-aos="fade-left"] { transform: translateX(-32px); }
+[data-aos="fade-left"] { transform: translateX(-20px); }
 [data-aos="fade-left"].aos-animate { transform: translateX(0); }
-[data-aos="fade-right"] { transform: translateX(32px); }
+[data-aos="fade-right"] { transform: translateX(20px); }
 [data-aos="fade-right"].aos-animate { transform: translateX(0); }
 [data-aos="scale-up"] { transform: scale(0.88); }
 [data-aos="scale-up"].aos-animate { transform: scale(1); }
