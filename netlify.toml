@@ -1,0 +1,59 @@
+[[redirects]]
+  from = "/flight-training"
+  to = "/pages/flight-training.html"
+  status = 200
+
+[[redirects]]
+  from = "/cadet-programme"
+  to = "/pages/cadet-programme.html"
+  status = 200
+
+[[redirects]]
+  from = "/cabin-crew"
+  to = "/pages/cabin-crew.html"
+  status = 200
+
+[[redirects]]
+  from = "/amo"
+  to = "/pages/amo.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/pages/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/pages/privacy-policy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/pages/terms.html"
+  status = 200
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

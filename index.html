@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Coral Sky Aviation — SACAA-approved pilot training school at Rand Airport, Germiston. PPL, CPL, IR and Cadet Pilot programmes. 400+ pilots trained. Zero to CPL in 14 months." />
+  <title>Coral Sky Aviation | SACAA-Approved Pilot Training — Rand Airport</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="index.html" class="nav-logo" aria-label="Coral Sky Aviation home">
+        <svg class="nav-logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="21" stroke="#2B7FC1" stroke-width="1.5"/>
+          <path d="M8 24 L20 18 L22 14 L24 18 L36 24 L24 22 L22 26 L20 22 Z" fill="#C9A84C"/>
+          <path d="M14 28 L17 26 L22 28 L27 26 L30 28" stroke="#2B7FC1" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        <div class="nav-logo-text">
+          <span class="brand-name">CORAL SKY</span>
+          <span class="brand-sub">Aviation</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="#programmes" aria-haspopup="true">Programmes</a>
+          <ul class="dropdown" role="list">
+            <li><a href="pages/flight-training.html">Flight Training (PPL–CPL–IR)</a></li>
+            <li><a href="pages/cadet-programme.html">Cadet Pilot Programme</a></li>
+            <li><a href="pages/cabin-crew.html">Cabin Crew Training</a></li>
+            <li><a href="pages/amo.html">Aircraft Maintenance (AMO)</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="pages/contact.html" class="btn-enquire">Enquire Now</a>
+      </div>
+
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Overlay -->
+<div class="nav-mobile-overlay" role="dialog" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="pages/flight-training.html">Flight Training</a>
+  <a href="pages/cadet-programme.html">Cadet Programme</a>
+  <a href="pages/cabin-crew.html">Cabin Crew</a>
+  <a href="pages/amo.html">Aircraft Maintenance</a>
+  <a href="pages/about.html">About Us</a>
+  <a href="pages/contact.html">Contact</a>
+  <div class="mobile-cta">
+    <a href="pages/contact.html" class="btn btn-primary">Enquire Now</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" aria-label="Hero">
+  <canvas id="hero-particles" aria-hidden="true"></canvas>
+  <div class="hero-gradient" aria-hidden="true"></div>
+
+  <!-- Cessna 172 Silhouette -->
+  <div class="hero-aircraft" aria-hidden="true">
+    <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg">
+      <!-- Vertical tail fin -->
+      <path d="M58,96 Q64,52 94,38 L100,96 Z" fill="white" opacity="0.92"/>
+      <!-- Horizontal stabiliser -->
+      <path d="M22,102 L100,102 L100,110 L22,110 Z" fill="white" opacity="0.88"/>
+      <path d="M22,102 L60,96 L60,110 L22,110 Z" fill="white" opacity="0.88"/>
+      <!-- Fuselage -->
+      <path d="M100,96 L400,88 Q440,86 464,98 Q470,102 464,106 Q440,118 400,116 L100,108 Z" fill="white" opacity="0.94"/>
+      <!-- Cockpit bubble -->
+      <path d="M290,88 Q305,62 340,58 Q372,56 390,86" fill="#2B7FC1" opacity="0.45" stroke="white" stroke-width="1.2"/>
+      <!-- High wing (above fuselage) -->
+      <path d="M260,88 L275,88 L282,22 L68,46 L64,62 L260,86 Z" fill="white" opacity="0.92"/>
+      <!-- Wing strut -->
+      <line x1="195" y1="88" x2="178" y2="58" stroke="white" stroke-width="1.8" opacity="0.65"/>
+      <!-- Engine cowl -->
+      <ellipse cx="470" cy="102" rx="12" ry="14" fill="white" opacity="0.88"/>
+      <!-- Propeller -->
+      <line x1="482" y1="72" x2="482" y2="132" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+      <!-- Main gear -->
+      <line x1="308" y1="116" x2="308" y2="142" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="296" y1="142" x2="322" y2="142" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="296" cy="144" rx="8" ry="4" fill="white" opacity="0.7"/>
+      <ellipse cx="322" cy="144" rx="8" ry="4" fill="white" opacity="0.7"/>
+      <!-- Tail wheel -->
+      <line x1="88" y1="108" x2="88" y2="124" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="88" cy="128" r="5" fill="white" opacity="0.7"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">SACAA-Approved · Rand Airport, Germiston</p>
+      <h1 class="hero-headline">
+        YOUR CAREER<br>
+        BEGINS <span class="gold-underline">HERE.</span>
+      </h1>
+      <p class="hero-sub">SACAA Approved &nbsp;·&nbsp; 20 Years of Excellence &nbsp;·&nbsp; 400+ Pilots Trained</p>
+      <div class="hero-actions">
+        <a href="pages/contact.html" class="btn btn-primary">Enquire Now</a>
+        <a href="#programmes" class="btn btn-ghost">Explore Programmes</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="hero-scroll-chevron"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+     ============================================================ -->
+<section class="trust-bar" aria-label="Key statistics">
+  <div class="container">
+    <div class="trust-bar-grid">
+      <div class="trust-stat" data-aos>
+        <span class="trust-stat-number" data-count="400" data-suffix="+">400+</span>
+        <span class="trust-stat-label">Pilots Trained</span>
+      </div>
+      <div class="trust-stat" data-aos data-aos-delay="150">
+        <span class="trust-stat-number" data-count="20" data-suffix=" YRS">20 YRS</span>
+        <span class="trust-stat-label">of Excellence</span>
+      </div>
+      <div class="trust-stat" data-aos data-aos-delay="300">
+        <span class="trust-stat-number" data-count="14" data-suffix=" MO">14 MO</span>
+        <span class="trust-stat-label">Zero to CPL</span>
+      </div>
+      <div class="trust-stat" data-aos data-aos-delay="450">
+        <span class="trust-stat-number">1:7</span>
+        <span class="trust-stat-label">Aircraft-to-Student Ratio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROGRAMMES
+     ============================================================ -->
+<section class="programmes" id="programmes" aria-labelledby="prog-heading">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-eyebrow">What We Offer</span>
+      <h2 class="section-title" id="prog-heading">Choose Your Path</h2>
+      <div class="section-title-divider"></div>
+    </div>
+
+    <div class="programmes-grid">
+
+      <!-- Flight Training -->
+      <article class="programme-card" data-aos data-aos-delay="100" tabindex="0">
+        <span class="badge badge-live">● Live &amp; Enrolling</span>
+        <svg class="programme-card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 26 L20 18 L22 10 L24 18 L38 26 L24 23 L22 30 L20 23 Z"/>
+          <path d="M12 32 L16 30 L22 33 L28 30 L32 32"/>
+        </svg>
+        <h3 class="programme-card-title">Flight Training</h3>
+        <p class="programme-card-duration">PPL → CPL → IR · 14–18 Months</p>
+        <p class="programme-card-desc">Full commercial pilot pathway from Private Pilot Licence through to Instrument Rating. Fly a Cessna 172 from day one. Our structured curriculum is designed to get you airline-ready efficiently.</p>
+        <p class="programme-card-qual"><strong>Outcome:</strong> SACAA CPL + Instrument Rating</p>
+        <a href="pages/flight-training.html" class="programme-card-link" aria-label="Learn more about Flight Training">
+          Learn More
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <p class="enquire-note">Enquire for Pricing →</p>
+      </article>
+
+      <!-- Cadet Programme -->
+      <article class="programme-card" data-aos data-aos-delay="200" tabindex="0">
+        <span class="badge badge-soon">Enrolling Soon</span>
+        <svg class="programme-card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="22" cy="14" r="5"/>
+          <path d="M6 38c0-8.837 7.163-14 16-14s16 5.163 16 14"/>
+          <path d="M22 28 L22 38 M18 32 L26 32"/>
+        </svg>
+        <h3 class="programme-card-title">Cadet Pilot Programme</h3>
+        <p class="programme-card-duration">Structured Pathway · Approx. 18 Months</p>
+        <p class="programme-card-desc">A fully structured ab-initio cadet pathway designed for aspiring airline pilots. Includes mentorship, simulator training, and career placement support in partnership with regional carriers.</p>
+        <p class="programme-card-qual"><strong>Outcome:</strong> Airline-Ready CPL + Multi-Engine + IR</p>
+        <a href="pages/cadet-programme.html" class="programme-card-link" aria-label="Learn more about Cadet Programme">
+          Learn More
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <p class="enquire-note">Enquire for Pricing →</p>
+      </article>
+
+      <!-- Cabin Crew -->
+      <article class="programme-card" data-aos data-aos-delay="300" tabindex="0">
+        <span class="badge badge-coming">Coming Soon</span>
+        <svg class="programme-card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M8 36 L8 18 Q8 10 22 10 Q36 10 36 18 L36 36"/>
+          <path d="M14 22 L30 22 M14 28 L25 28"/>
+          <circle cx="22" cy="14" r="4"/>
+        </svg>
+        <h3 class="programme-card-title">Cabin Crew Training</h3>
+        <p class="programme-card-duration">Certificate Programme · 6–8 Weeks</p>
+        <p class="programme-card-desc">Comprehensive cabin crew certification covering safety procedures, emergency responses, passenger service, and airline readiness. Designed to meet international aviation standards.</p>
+        <p class="programme-card-qual"><strong>Outcome:</strong> Cabin Crew Certificate</p>
+        <a href="pages/cabin-crew.html" class="programme-card-link" aria-label="Learn more about Cabin Crew Training">
+          Learn More
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <p class="enquire-note">Enquire for Pricing →</p>
+      </article>
+
+      <!-- AMO -->
+      <article class="programme-card" data-aos data-aos-delay="400" tabindex="0">
+        <span class="badge badge-coming">Coming Soon</span>
+        <svg class="programme-card-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M28 8 L36 16 L18 34 L10 34 L10 26 Z"/>
+          <path d="M24 12 L32 20"/>
+          <circle cx="34" cy="34" r="4"/>
+          <path d="M30 34 A4 4 0 0 1 38 34"/>
+        </svg>
+        <h3 class="programme-card-title">Aircraft Maintenance — AMO</h3>
+        <p class="programme-card-duration">Approved Maintenance Organisation</p>
+        <p class="programme-card-desc">SACAA-compliant aircraft maintenance organisation offering line and base maintenance. Gain hands-on engineering experience and technical qualifications under certified engineers.</p>
+        <p class="programme-card-qual"><strong>Outcome:</strong> Aviation Maintenance Certificate</p>
+        <a href="pages/amo.html" class="programme-card-link" aria-label="Learn more about AMO">
+          Learn More
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <p class="enquire-note">Enquire for Pricing →</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CORAL SKY — USP
+     ============================================================ -->
+<section class="usp" aria-labelledby="usp-heading">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-eyebrow">Our Difference</span>
+      <h2 class="section-title" id="usp-heading" style="color: var(--midnight-navy);">Why Coral Sky</h2>
+      <div class="section-title-divider"></div>
+    </div>
+
+    <div class="usp-features">
+      <!-- Feature 1 -->
+      <div class="usp-feature">
+        <div class="usp-feature-content" data-aos="fade-right">
+          <svg class="usp-feature-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="28" cy="28" r="22"/>
+            <path d="M28 14 L28 28 L38 34"/>
+          </svg>
+          <h3 class="usp-feature-title">Zero to CPL<br>in 14 Months</h3>
+          <p class="usp-feature-text">Our integrated curriculum compresses the traditional timeline without compromising standards. Ground school, simulator, and flight hours are sequenced to eliminate dead time between phases. You start flying a Cessna 172 in week one.</p>
+          <div class="usp-feature-highlight">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#C9A84C" stroke-width="2" aria-hidden="true"><path d="M8 2 L8 8 L11 11"/><circle cx="8" cy="8" r="6"/></svg>
+            <span>Fastest SACAA-compliant commercial pathway in South Africa</span>
+          </div>
+        </div>
+        <div class="usp-feature-image" data-aos="fade-left" data-aos-delay="100">
+          <!-- TODO: Replace with real school photo — September 2026 -->
+          <img src="https://picsum.photos/seed/cessna172/640/480" alt="Student pilot in Cessna 172 cockpit" loading="lazy" width="640" height="480"/>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="usp-feature reverse">
+        <div class="usp-feature-content" data-aos="fade-left">
+          <svg class="usp-feature-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M10 30 L24 22 L28 14 L32 22 L46 30 L32 27 L28 34 L24 27 Z"/>
+            <path d="M14 36 L18 34 L28 37 L38 34 L42 36"/>
+          </svg>
+          <h3 class="usp-feature-title">Active Airline Captains<br>as Instructors</h3>
+          <p class="usp-feature-text">Your instructors are not career flight school teachers. They are active commercial airline captains bringing real-world procedures, CRM methodology, and current airline culture into every lesson. The gap between training and employment closes before you graduate.</p>
+          <div class="usp-feature-highlight">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#C9A84C" stroke-width="2" aria-hidden="true"><path d="M2 9 L6 13 L14 4"/></svg>
+            <span>Real airline experience — not textbook theory</span>
+          </div>
+        </div>
+        <div class="usp-feature-image" data-aos="fade-right" data-aos-delay="100">
+          <!-- TODO: Replace with real school photo — September 2026 -->
+          <img src="https://picsum.photos/seed/pilotinstructor/640/480" alt="Flight instructor briefing student" loading="lazy" width="640" height="480"/>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="usp-feature">
+        <div class="usp-feature-content" data-aos="fade-right">
+          <svg class="usp-feature-icon" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <rect x="10" y="18" width="12" height="20" rx="2"/>
+            <rect x="22" y="22" width="12" height="16" rx="2"/>
+            <rect x="34" y="14" width="12" height="24" rx="2"/>
+            <path d="M10 42 L46 42"/>
+          </svg>
+          <h3 class="usp-feature-title">1:7 Aircraft-to-Student Ratio</h3>
+          <p class="usp-feature-text">We deliberately limit student intake to maintain our 1:7 ratio. You get more hours in the air, more instructor attention, and a faster progression through each phase. No queuing. No delays. Your training stays on schedule.</p>
+          <div class="usp-feature-highlight">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#C9A84C" stroke-width="2" aria-hidden="true"><path d="M2 9 L6 13 L14 4"/></svg>
+            <span>Industry-leading access — more air time, faster progress</span>
+          </div>
+        </div>
+        <div class="usp-feature-image" data-aos="fade-left" data-aos-delay="100">
+          <!-- TODO: Replace with real school photo — September 2026 -->
+          <img src="https://picsum.photos/seed/randairport/640/480" alt="Fleet of training aircraft at Rand Airport" loading="lazy" width="640" height="480"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- USP Grid -->
+    <div class="usp-grid">
+      <div class="usp-item" data-aos data-aos-delay="100">
+        <svg class="usp-item-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 18 L18 8 L32 18 L28 18 L28 30 L8 30 L8 18 Z"/></svg>
+        <h4 class="usp-item-title">Everything Under One Roof</h4>
+        <p class="usp-item-text">Ground school, simulator, flight training, and theory exams all at Rand Airport — no commuting between facilities.</p>
+      </div>
+      <div class="usp-item" data-aos data-aos-delay="200">
+        <svg class="usp-item-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="18" r="14"/><path d="M4 18 Q9 12 18 12 Q27 12 32 18 Q27 24 18 24 Q9 24 4 18Z"/><circle cx="18" cy="18" r="4"/></svg>
+        <h4 class="usp-item-title">International Student Community</h4>
+        <p class="usp-item-text">Students from across Africa, Europe, Asia, and the Middle East. Build your international network from day one of training.</p>
+      </div>
+      <div class="usp-item" data-aos data-aos-delay="300">
+        <svg class="usp-item-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 20 L10 14 L18 18 L22 10 L30 16"/><path d="M4 28 L32 28"/></svg>
+        <h4 class="usp-item-title">Custom Currency Quotations</h4>
+        <p class="usp-item-text">We provide personalised quotes in your local currency, making budgeting clear and transparent for every international student.</p>
+      </div>
+      <div class="usp-item" data-aos data-aos-delay="100">
+        <svg class="usp-item-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="4" y="10" width="28" height="18" rx="3"/><path d="M12 14 L12 22 M18 12 L18 24 M24 16 L24 20"/></svg>
+        <h4 class="usp-item-title">State-of-the-Art Simulator</h4>
+        <p class="usp-item-text">Full-motion simulator training prepares you for instrument flying, adverse conditions, and complex procedures before you encounter them in the real aircraft.</p>
+      </div>
+      <div class="usp-item" data-aos data-aos-delay="200">
+        <svg class="usp-item-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 4 L22 14 L32 14 L24 20 L27 30 L18 24 L9 30 L12 20 L4 14 L14 14 Z"/></svg>
+        <h4 class="usp-item-title">Full Airline Career Pathway</h4>
+        <p class="usp-item-text">From zero hours to First Officer-ready. Our career services team provides interview preparation, airline connections, and ongoing graduate support.</p>
+      </div>
+      <div class="usp-item" data-aos data-aos-delay="300">
+        <svg class="usp-item-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 4 L18 16 M6 20 Q6 10 18 10 Q30 10 30 20 L30 28 L6 28 Z"/><path d="M10 28 L10 32 M26 28 L26 32"/></svg>
+        <h4 class="usp-item-title">Based at Rand Airport</h4>
+        <p class="usp-item-text">Rand Airport in Germiston offers excellent VFR and IFR training airspace, low traffic density, and convenient access from Johannesburg and Pretoria.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     PATHWAY VISUALISER
+     ============================================================ -->
+<section class="pathway" aria-labelledby="pathway-heading">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-eyebrow">Your Journey</span>
+      <h2 class="section-title" id="pathway-heading">The Pathway to Airline</h2>
+      <div class="section-title-divider"></div>
+    </div>
+
+    <div class="pathway-timeline">
+      <div class="pathway-line"><div class="pathway-line-fill"></div></div>
+      <div class="pathway-steps">
+
+        <div class="pathway-step" data-aos data-aos-delay="100">
+          <span class="pathway-step-duration">4–6 Months</span>
+          <div class="pathway-step-node">
+            <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="8" r="4"/><path d="M3 20 Q3 14 11 14 Q19 14 19 20"/></svg>
+          </div>
+          <span class="pathway-step-label">PPL</span>
+          <span class="pathway-step-sub">Private Pilot Licence</span>
+        </div>
+
+        <div class="pathway-step" data-aos data-aos-delay="200">
+          <span class="pathway-step-duration">6–10 Months</span>
+          <div class="pathway-step-node">
+            <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 13 L10 9 L11 5 L12 9 L19 13 L12 11 L11 15 L10 11 Z"/></svg>
+          </div>
+          <span class="pathway-step-label">CPL</span>
+          <span class="pathway-step-sub">Commercial Pilot Licence</span>
+        </div>
+
+        <div class="pathway-step" data-aos data-aos-delay="300">
+          <span class="pathway-step-duration">10–12 Months</span>
+          <div class="pathway-step-node">
+            <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M4 11 Q7 7 11 7 Q15 7 18 11 Q15 15 11 15 Q7 15 4 11Z"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <span class="pathway-step-label">IR</span>
+          <span class="pathway-step-sub">Instrument Rating</span>
+        </div>
+
+        <div class="pathway-step" data-aos data-aos-delay="400">
+          <span class="pathway-step-duration">+2–4 Months</span>
+          <div class="pathway-step-node">
+            <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 12 L9 8 L11 4 L13 8 L20 12 L13 10 L11 14 L9 10 Z M4 14 L6 13 L11 15 L16 13 L18 14"/></svg>
+          </div>
+          <span class="pathway-step-label">Multi</span>
+          <span class="pathway-step-sub">Multi-Engine Rating</span>
+        </div>
+
+        <div class="pathway-step" data-aos data-aos-delay="500">
+          <span class="pathway-step-duration">&nbsp;</span>
+          <div class="pathway-step-node">
+            <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M11 2 L13 8 L19 8 L14 12 L16 18 L11 14 L6 18 L8 12 L3 8 L9 8 Z"/></svg>
+          </div>
+          <span class="pathway-step-label">Airline Ready</span>
+          <span class="pathway-step-sub">Commercial Pilot</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CREDIBILITY / ABOUT STRIP
+     ============================================================ -->
+<section class="credibility" aria-labelledby="cred-heading">
+  <div class="container">
+    <div class="credibility-grid">
+      <div class="credibility-stats" data-aos="fade-right">
+        <div class="cred-stat">
+          <div class="cred-stat-number" data-count="400" data-suffix="+">400+</div>
+          <div class="cred-stat-label">CPL Graduates</div>
+        </div>
+        <div class="cred-stat">
+          <div class="cred-stat-number" data-count="20" data-suffix=" YRS">20 YRS</div>
+          <div class="cred-stat-label">Legacy</div>
+        </div>
+        <div class="cred-stat">
+          <div class="cred-stat-number">RAND</div>
+          <div class="cred-stat-label">Airport, Germiston</div>
+        </div>
+        <div class="cred-stat">
+          <div class="cred-stat-number">SACAA</div>
+          <div class="cred-stat-label">Approved School</div>
+        </div>
+      </div>
+
+      <div class="credibility-content" data-aos="fade-left" data-aos-delay="100">
+        <span class="section-eyebrow">Our Story</span>
+        <h2 class="section-title" id="cred-heading">Two Decades of<br>Shaping Pilots</h2>
+        <p>Coral Sky Aviation was built on a single belief: that with the right training environment, any determined student can reach the right-hand seat of a commercial airliner. Over two decades, we have delivered exactly that — producing hundreds of licensed commercial pilots who fly across Africa, the Middle East, and beyond.</p>
+        <p>Headquartered at Rand Airport in Germiston, Gauteng, we operate within one of South Africa's most active general aviation hubs, giving our students unmatched exposure to real-world airspace from their very first solo flight.</p>
+        <div class="credibility-cert">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="6" y="6" width="32" height="32" rx="4"/><path d="M14 18 L20 24 L30 14"/><circle cx="22" cy="22" r="8" stroke-width="1"/></svg>
+          <div class="credibility-cert-text">SACAA Approved · 20 Years of Excellence<br>400+ Pilots Trained · Rand Airport, Germiston</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-eyebrow">Graduate Voices</span>
+      <h2 class="section-title" id="testimonials-heading">What Our Pilots Say</h2>
+      <div class="section-title-divider"></div>
+    </div>
+
+    <!-- TODO: Replace placeholder testimonials before launch -->
+    <div class="testimonials-track" role="list">
+      <div class="testimonial-card" role="listitem">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <p class="testimonial-text">[Real testimonial from graduate — to be added September 2026] The structured pathway at Coral Sky was exactly what I needed. From my PPL to CPL, every phase was seamlessly connected. I was flying commercially within a month of graduation.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">T</div>
+          <div>
+            <div class="testimonial-name">Thandeka M. 🇿🇦</div>
+            <div class="testimonial-meta">CPL Graduate · Flight Training</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" role="listitem">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <p class="testimonial-text">[Real testimonial from graduate — to be added September 2026] Coming from Zimbabwe, I was concerned about finding a quality school that understood international students. Coral Sky provided personalised support and custom pricing that made it possible.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">C</div>
+          <div>
+            <div class="testimonial-name">Chiedza N. 🇿🇼</div>
+            <div class="testimonial-meta">CPL Graduate · Cadet Programme</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" role="listitem">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <p class="testimonial-text">[Real testimonial from graduate — to be added September 2026] My instructor was an active airline captain. That made an enormous difference. I arrived for airline interviews already speaking the language of commercial aviation — not just the theory.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">A</div>
+          <div>
+            <div class="testimonial-name">Arjun S. 🇮🇳</div>
+            <div class="testimonial-meta">CPL + IR Graduate · Flight Training</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials-nav" role="tablist" aria-label="Testimonials navigation">
+      <button class="testimonials-dot" role="tab" aria-label="Testimonial 1"></button>
+      <button class="testimonials-dot" role="tab" aria-label="Testimonial 2"></button>
+      <button class="testimonials-dot" role="tab" aria-label="Testimonial 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WORLD MAP
+     ============================================================ -->
+<section class="worldmap" aria-labelledby="worldmap-heading">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-eyebrow">Global Community</span>
+      <h2 class="section-title" id="worldmap-heading">Students from Around the World</h2>
+      <div class="section-title-divider"></div>
+    </div>
+
+    <div class="worldmap-wrap" data-aos>
+      <!-- Simplified SVG World Map -->
+      <svg class="worldmap-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" aria-label="World map showing student origin countries" role="img">
+        <rect width="1000" height="500" fill="#071120"/>
+        <!-- Grid lines -->
+        <g stroke="rgba(43,127,193,0.08)" stroke-width="0.5">
+          <line x1="0" y1="125" x2="1000" y2="125"/>
+          <line x1="0" y1="250" x2="1000" y2="250"/>
+          <line x1="0" y1="375" x2="1000" y2="375"/>
+          <line x1="250" y1="0" x2="250" y2="500"/>
+          <line x1="500" y1="0" x2="500" y2="500"/>
+          <line x1="750" y1="0" x2="750" y2="500"/>
+        </g>
+        <!-- North America -->
+        <path d="M105,72 L140,65 L195,68 L235,75 L258,90 L265,120 L260,155 L245,185 L225,205 L200,218 L180,215 L155,200 L135,180 L115,155 L95,125 L88,100 Z" fill="rgba(43,127,193,0.18)" stroke="rgba(43,127,193,0.35)" stroke-width="0.8"/>
+        <!-- South America -->
+        <path d="M218,228 L268,220 L300,235 L318,265 L322,305 L315,350 L296,390 L272,408 L248,402 L225,375 L212,335 L208,285 L212,250 Z" fill="rgba(43,127,193,0.18)" stroke="rgba(43,127,193,0.35)" stroke-width="0.8"/>
+        <!-- Europe -->
+        <path d="M452,90 L510,82 L535,92 L540,108 L528,126 L510,138 L488,142 L462,136 L445,120 L448,102 Z" fill="rgba(43,127,193,0.2)" stroke="rgba(43,127,193,0.35)" stroke-width="0.8"/>
+        <!-- Africa -->
+        <path d="M498,178 L540,170 L576,178 L600,205 L615,242 L618,282 L606,322 L590,358 L568,382 L548,390 L524,385 L505,362 L490,330 L484,290 L485,250 L490,215 Z" fill="rgba(43,127,193,0.2)" stroke="rgba(43,127,193,0.35)" stroke-width="0.8"/>
+        <!-- Asia -->
+        <path d="M545,72 L620,65 L720,62 L800,68 L855,85 L868,110 L855,145 L820,172 L775,192 L730,205 L685,210 L645,200 L605,182 L572,158 L550,132 L542,105 Z" fill="rgba(43,127,193,0.18)" stroke="rgba(43,127,193,0.35)" stroke-width="0.8"/>
+        <!-- India sub-continent -->
+        <path d="M658,168 L695,162 L720,175 L728,205 L715,238 L695,258 L672,255 L655,232 L648,202 Z" fill="rgba(43,127,193,0.22)" stroke="rgba(43,127,193,0.35)" stroke-width="0.8"/>
+        <!-- Australia -->
+        <path d="M730,308 L798,298 L832,315 L838,355 L822,385 L790,398 L755,395 L724,372 L715,340 Z" fill="rgba(43,127,193,0.18)" stroke="rgba(43,127,193,0.35)" stroke-width="0.8"/>
+      </svg>
+
+      <!-- Dot markers positioned over map -->
+      <div class="worldmap-dots" aria-hidden="true">
+        <!-- South Africa (primary) -->
+        <div class="map-pin gold" style="left:56.2%;top:70.5%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">Coral Sky Aviation — Rand Airport, SA</div>
+        </div>
+        <!-- Zimbabwe -->
+        <div class="map-pin gold" style="left:57.5%;top:62.5%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">Zimbabwe Students</div>
+        </div>
+        <!-- Zambia -->
+        <div class="map-pin gold" style="left:55.8%;top:57.5%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">Zambia Students</div>
+        </div>
+        <!-- Botswana -->
+        <div class="map-pin gold" style="left:54.2%;top:65.5%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">Botswana Students</div>
+        </div>
+        <!-- Nigeria -->
+        <div class="map-pin blue" style="left:50.5%;top:51.5%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">Nigeria Students</div>
+        </div>
+        <!-- UK -->
+        <div class="map-pin blue" style="left:47.5%;top:22.5%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">UK Students</div>
+        </div>
+        <!-- UAE -->
+        <div class="map-pin blue" style="left:63.5%;top:40.5%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">UAE Students</div>
+        </div>
+        <!-- India -->
+        <div class="map-pin blue" style="left:69.5%;top:44.5%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">India Students</div>
+        </div>
+        <!-- USA -->
+        <div class="map-pin blue" style="left:20.5%;top:34%">
+          <div class="map-pin-dot"></div>
+          <div class="map-tooltip">USA Students</div>
+        </div>
+      </div>
+    </div>
+    <p class="worldmap-note">20+ nationalities represented · Growing every intake</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section class="gallery" aria-labelledby="gallery-heading">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-eyebrow">Life at Coral Sky</span>
+      <h2 class="section-title" id="gallery-heading">On the Ground &amp; In the Air</h2>
+      <div class="section-title-divider"></div>
+    </div>
+
+    <!-- TODO: Replace stock images with real school photos — September 2026 -->
+    <div class="gallery-grid">
+      <div class="gallery-item" data-aos>
+        <img src="https://picsum.photos/seed/cessnaside/480/640" alt="Cessna 172 on the apron at Rand Airport" loading="lazy" width="480" height="640"/>
+        <div class="gallery-overlay"><span class="gallery-caption">Our Fleet — Cessna 172</span></div>
+      </div>
+      <div class="gallery-item" data-aos data-aos-delay="100">
+        <img src="https://picsum.photos/seed/cockpitview/480/250" alt="Cockpit instrument panel view" loading="lazy" width="480" height="250"/>
+        <div class="gallery-overlay"><span class="gallery-caption">The Office</span></div>
+      </div>
+      <div class="gallery-item" data-aos data-aos-delay="200">
+        <img src="https://picsum.photos/seed/runwaysunset/480/250" alt="Runway at sunset" loading="lazy" width="480" height="250"/>
+        <div class="gallery-overlay"><span class="gallery-caption">Rand Airport Runway</span></div>
+      </div>
+      <div class="gallery-item" data-aos data-aos-delay="100">
+        <img src="https://picsum.photos/seed/groundschool/800/250" alt="Students in ground school classroom" loading="lazy" width="800" height="250"/>
+        <div class="gallery-overlay"><span class="gallery-caption">Ground School</span></div>
+      </div>
+      <div class="gallery-item" data-aos data-aos-delay="200">
+        <img src="https://picsum.photos/seed/aerialsa/480/250" alt="Aerial view of South African landscape" loading="lazy" width="480" height="250"/>
+        <div class="gallery-overlay"><span class="gallery-caption">South Africa from Above</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ENQUIRY / CTA
+     ============================================================ -->
+<section class="enquiry" id="enquiry" aria-labelledby="enquiry-heading">
+  <div class="container">
+    <div class="enquiry-inner">
+
+      <div class="enquiry-content" data-aos="fade-right">
+        <h2 class="enquiry-headline" id="enquiry-heading">Ready<br>to Fly?</h2>
+        <p class="enquiry-sub">Submit an enquiry today. Our team responds within 24 hours with detailed programme information and a personalised quote in your local currency.</p>
+        <div class="enquiry-note">
+          <p><strong>No fixed prices.</strong> Every student receives a personalised quote in their local currency — covering tuition, accommodation options, and study materials.</p>
+        </div>
+        <a href="https://wa.me/27633166313" class="enquiry-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="enquiry-form-wrap" data-aos="fade-left" data-aos-delay="100">
+        <!-- Formspree endpoint — replace YOUR_FORM_ID with actual Formspree form ID -->
+        <form class="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Enquiry from Coral Sky Aviation Website" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Full Name *</label>
+              <input type="text" id="f-name" name="name" placeholder="Your full name" required autocomplete="name"/>
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email Address *</label>
+              <input type="email" id="f-email" name="email" placeholder="you@email.com" required autocomplete="email"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-phone">Phone / WhatsApp *</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+1 234 567 8900" required autocomplete="tel"/>
+            </div>
+            <div class="form-group">
+              <label for="f-country">Country *</label>
+              <input type="text" id="f-country" name="country" placeholder="Your country" required autocomplete="country-name"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-programme">Programme of Interest *</label>
+            <select id="f-programme" name="programme" required>
+              <option value="" disabled selected>Select a programme…</option>
+              <option value="Flight Training (PPL–CPL–IR)">Flight Training (PPL–CPL–IR)</option>
+              <option value="Cadet Pilot Programme">Cadet Pilot Programme</option>
+              <option value="Cabin Crew Training">Cabin Crew Training</option>
+              <option value="Aircraft Maintenance (AMO)">Aircraft Maintenance (AMO)</option>
+              <option value="General Enquiry">General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" placeholder="Tell us a little about your background and goals…"></textarea>
+          </div>
+          <div class="form-submit">
+            <p class="form-notice">We respond within 24 hours. All enquiries are confidential.</p>
+            <button type="submit" class="btn-submit">Send Enquiry &rarr;</button>
+          </div>
+        </form>
+        <div class="form-success" role="alert">Thank you! We'll be in touch within 24 hours.</div>
+        <div class="form-error" role="alert">Something went wrong. Please try again or WhatsApp us directly.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="22" cy="22" r="21" stroke="#2B7FC1" stroke-width="1.5"/>
+            <path d="M8 24 L20 18 L22 14 L24 18 L36 24 L24 22 L22 26 L20 22 Z" fill="#C9A84C"/>
+            <path d="M14 28 L17 26 L22 28 L27 26 L30 28" stroke="#2B7FC1" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          <div class="nav-logo-text">
+            <span class="brand-name">CORAL SKY</span>
+            <span class="brand-sub">Aviation</span>
+          </div>
+        </div>
+        <p class="footer-tagline">SACAA-approved pilot training school operating from Rand Airport, Germiston, South Africa. Two decades of shaping the next generation of commercial pilots.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://wa.me/27633166313" aria-label="WhatsApp" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-title">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="#enquiry">Enquire Now</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-title">Programmes</h3>
+        <ul>
+          <li><a href="pages/flight-training.html">Flight Training</a></li>
+          <li><a href="pages/cadet-programme.html">Cadet Pilot Programme</a></li>
+          <li><a href="pages/cabin-crew.html">Cabin Crew Training</a></li>
+          <li><a href="pages/amo.html">Aircraft Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-title">Contact Us</h3>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M14 11.5c0 .3-.1.6-.2.9-.1.3-.4.6-.7.8-.5.3-1 .4-1.6.4-1.6 0-3.2-.5-4.7-1.4-1.4-.9-2.6-2.1-3.5-3.5-.9-1.5-1.4-3.1-1.4-4.7 0-.6.1-1.1.4-1.6.2-.3.5-.6.8-.7.3-.1.6-.2.9-.2h1c.4 0 .7.3.8.6l.7 2.7c.1.4 0 .7-.2 1L5.4 6.4c.8 1.5 2.2 2.8 3.7 3.7l1.1-.9c.3-.2.7-.3 1-.2l2.7.7c.4.1.6.5.6.9v1z"/></svg>
+          <a href="tel:+27633166313" class="contact-info-value">+27 63 316 6313</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12v9H2z M2 4l6 5 6-5"/></svg>
+          <a href="mailto:coralskyaviation@gmail.com" class="contact-info-value">coralskyaviation@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M8 2C5.8 2 4 3.8 4 6c0 3.3 4 8 4 8s4-4.7 4-8c0-2.2-1.8-4-4-4z"/><circle cx="8" cy="6" r="1.5"/></svg>
+          <span class="contact-info-value">Rand Airport, Germiston<br>Gauteng, South Africa<br><em style="font-style:normal;font-size:11px;opacity:0.6">(Address — Temporary)</em></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Coral Sky Aviation (Pty) Ltd. All Rights Reserved.</p>
+      <div class="footer-legal">
+        <a href="pages/privacy-policy.html">Privacy Policy</a>
+        <a href="pages/terms.html">Terms &amp; Conditions</a>
+      </div>
+      <div class="footer-sacaa">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7 L5 10 L10 3"/></svg>
+        SACAA Approved
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/27633166313" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- Mobile Sticky CTA (mobile only) -->
+<div class="mobile-sticky-cta" aria-label="Quick actions">
+  <a href="#enquiry" class="cta-enquire">📩 Enquire</a>
+  <a href="tel:+27633166313" class="cta-call">📞 Call</a>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
